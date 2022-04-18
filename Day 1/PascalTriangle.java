@@ -14,10 +14,11 @@ public class PascalTriangle {
 
             Matrix.add(thisRow);
 
-            //Taking care of 0th element
+
 
             for(int j=0;j<NumElements;j++)
             {
+                //Taking care of 0th element and Kth Element
                 if(j==0 || j==NumElements-1) thisRow.add(1);
 
                 else

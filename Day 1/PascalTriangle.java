@@ -23,7 +23,6 @@ public class PascalTriangle {
 
                 else
                 {
-                    int prevRow = currRow <= 1 ? currRow : currRow-1;
                     int newElement = Matrix.get(currRow-1).get(j-1) + Matrix.get(currRow-1).get(j);
                     thisRow.add(newElement);
                 }

@@ -19,7 +19,9 @@ public class CheckForBalancedBST {
         int left = HeightOfTree(root.left);         //O(N)
         int right=HeightOfTree(root.right);         //O(N)
 
-        return (left-right)<=1 && isBalancedBinaryTree(root.left) && isBalancedBinaryTree(root.right);
+        if(Math.abs(left-right)>1) return false;
+
+        return isBalancedBinaryTree(root.left) && isBalancedBinaryTree(root.right) ;
 
     }
 
@@ -50,6 +52,7 @@ public class CheckForBalancedBST {
         Root.right=new TreeNode<>(20);
         Root.right.left=new TreeNode<>(15);
         Root.right.right=new TreeNode<>(7);
+        Root.right.right.left=new TreeNode<>(17);
 
 
 
